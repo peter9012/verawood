@@ -1,65 +1,95 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Hero from "@/components/sections/Hero";
+import SectionHeader from "@/components/sections/SectionHeader";
+import ProductGrid from "@/components/sections/ProductGrid";
+import ProjectFeature from "@/components/sections/ProjectFeature";
+import ProjectTile from "@/components/sections/ProjectTile";
+import CraftGrid from "@/components/sections/CraftGrid";
+import CraftSteps from "@/components/sections/CraftSteps";
+import CTABand from "@/components/sections/CTABand";
+import LinkUnderline from "@/components/ui/LinkUnderline";
+import { PRODUCTS } from "@/lib/data/products";
+import { FEATURE_PROJECT, HOME_PROJECTS } from "@/lib/data/projects";
+import { CRAFT_STEPS } from "@/lib/data/collections";
+import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SITE_URL, OG_IMAGE } from "@/lib/siteConfig";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: "Premium European hardwood flooring for architects, designers, and discerning homes, since 1974.",
+    url: SITE_URL,
+    images: [{ url: OG_IMAGE }],
+  },
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <Hero />
+
+      {/* New Arrivals */}
+      <section className="section collections" id="collections" aria-labelledby="arrivals-heading">
+        <div className="shell">
+          <SectionHeader
+            eyebrow="Hot Selling Products"
+            title="Discover What's New"
+            linkHref="/products"
+            linkLabel="View all collections"
+          />
+          <p className="collections__lede reveal">
+            Designed for contemporary architecture and timeless interiors.
           </p>
+          <ProductGrid products={PRODUCTS} />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Projects */}
+      <section className="section projects" id="projects" aria-labelledby="projects-heading">
+        <div className="shell">
+          <SectionHeader
+            eyebrow="Architecture"
+            title="Where our floors come to rest."
+            linkHref="/gallery"
+            linkLabel="All projects"
+          />
+          <ProjectFeature project={FEATURE_PROJECT} />
+          <div className="proj-row">
+            {HOME_PROJECTS.map((p, i) => (
+              <ProjectTile key={p.id} project={p} delay={i === 1 ? 1 : undefined} />
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Craft */}
+      <CraftGrid
+        imagePlaceholder="CRAFT · hands planing a board in the atelier, sawdust in light, monochrome warmth"
+      >
+        <span className="eyebrow reveal">The Making</span>
+        <h2 className="reveal" data-delay="1">
+          A board passes through eleven hands before it reaches a floor.
+        </h2>
+        <p className="reveal" data-delay="2">
+          Logs are quarter-sawn for stability and grain, then air-dried for two seasons before kiln.
+          Each plank is graded by eye, brushed to raise its texture, and finished with natural oils
+          that let the wood breathe — never sealed beneath plastic. The result ages, rather than wears.
+        </p>
+        <CraftSteps steps={CRAFT_STEPS} delay={3} />
+        <LinkUnderline href="/craftsmanship" className="craft__more reveal">
+          The full process
+        </LinkUnderline>
+      </CraftGrid>
+
+      {/* CTA */}
+      <CTABand
+        eyebrow="Request Samples"
+        title="Hold the wood in your hands."
+        body="We'll send a curated box of full-size samples — graded, oiled, and labelled — anywhere in the world, at no cost to the trade."
+        actions={[{ label: "Request a Sample", href: "/samples", solid: true }]}
+      />
+    </>
   );
 }
