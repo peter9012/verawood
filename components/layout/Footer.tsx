@@ -19,8 +19,7 @@ export default function Footer() {
               height={46}
             />
             <p>
-              European hardwood floors for architects, designers, and the homes they imagine.
-              Piedmont &amp; Burgundy, since 1974.
+              Luxury hardwood flooring for architects, interior designers, builders, and homeowners seeking exceptional craftsmanship.
             </p>
             <NewsletterForm />
           </div>

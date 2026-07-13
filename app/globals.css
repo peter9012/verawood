@@ -602,7 +602,9 @@ section { position: relative; }
    CTA band
    ----------------------------------------------------------------------- */
 .cta { text-align: center; background: var(--ink); color: var(--paper); background-image: repeating-linear-gradient(0deg, rgba(244,241,236,0.045) 0 1px, transparent 1px 64px), repeating-linear-gradient(90deg, rgba(244,241,236,0.045) 0 1px, transparent 1px 64px); background-position: center; }
-.cta .shell { max-width: 980px; }
+.cta .media { --ph-bg: #221f1a; }
+.cta__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(rgba(15,13,10,0.74), rgba(15,13,10,0.74)); pointer-events: none; }
+.cta .shell { position: relative; z-index: 2; max-width: 980px; }
 .cta__eyebrow { justify-content: center; color: rgba(244,241,236,0.62); }
 .cta__eyebrow::before { background: rgba(244,241,236,0.5); }
 .cta h2 { font-family: var(--font-display); font-weight: var(--disp-weight); letter-spacing: var(--disp-track); line-height: 1.04; font-size: clamp(36px, 6vw, 92px); margin-top: clamp(24px, 3vw, 36px); text-wrap: balance; color: var(--paper); }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { CTAAction } from "@/types";
 import Button from "@/components/ui/Button";
 
@@ -6,11 +7,19 @@ interface Props {
   title: string;
   body?: string;
   actions: CTAAction[];
+  /** Public path to a photo rendered full-bleed behind the content, with a dark overlay for legibility */
+  backgroundImage?: string;
 }
 
-export default function CTABand({ eyebrow, title, body, actions }: Props) {
+export default function CTABand({ eyebrow, title, body, actions, backgroundImage }: Props) {
   return (
     <section className="section cta" aria-labelledby="cta-heading">
+      {backgroundImage && (
+        <>
+          <Image className="media" src={backgroundImage} alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
+          <div className="cta__scrim" aria-hidden="true" />
+        </>
+      )}
       <div className="shell">
         {eyebrow && (
           <span className="eyebrow no-rule cta__eyebrow reveal">{eyebrow}</span>

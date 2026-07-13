@@ -100,6 +100,8 @@ export interface PageHeroProps {
   /** Public path to a real photo — takes priority over imagePlaceholder when set */
   image?: string;
   imageAlt?: string;
+  /** Public path to a video file — takes priority over image/imagePlaceholder when set */
+  video?: string;
 }
 
 // ─── Certification ───────────────────────────────────────────────────────────

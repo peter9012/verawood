@@ -27,26 +27,24 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="Made by nature. Refined by hand."
-        lede="Verawood began as a single sawmill in Burgundy. Three generations later, we still grade every board by eye before it leaves our hands."
+        title="Made for timeless spaces"
+        lede="Verawood creates premium engineered hardwood flooring for architects, interior designers, builders, and discerning homeowners. Every collection is selected for exceptional beauty, lasting performance, and the ability to elevate modern living."
         imagePlaceholder="BANNER · black-and-white archival-style photo of the original Burgundy sawmill"
+        video="/image/about/about.mp4"
       />
 
       {/* Story */}
-      <CraftGrid imagePlaceholder="ABOUT · founder's portrait or family group, atelier setting, warm natural light">
+      <CraftGrid
+        imagePlaceholder="ABOUT · founder's portrait or family group, atelier setting, warm natural light"
+        video="/image/about/story.mp4"
+      >
         <span className="eyebrow reveal">Our Story</span>
-        <h2 className="reveal" data-delay="1">A trade passed down, not franchised out.</h2>
+        <h2 className="reveal" data-delay="1">Every remarkable space begins beneath your feet</h2>
         <p className="reveal" data-delay="2">
-          Verawood was founded in 1974 in the forests of Burgundy, where the first generation of our
-          family began quarter-sawing oak for local cabinetmakers. What started as a single mill grew,
-          slowly and deliberately, into a flooring house trusted by architects across Europe and,
-          later, abroad — without ever opening a factory we couldn&apos;t walk through ourselves.
+          Our collections bring together carefully selected hardwood, premium construction, and sophisticated finishes to create floors that are timeless, durable, and naturally beautiful. Designed for architects, interior designers, builders, and discerning homeowners, every collection reflects our commitment to quality without compromise.
         </p>
         <p className="reveal" data-delay="3">
-          Today we work two regions: Burgundy for our European White Oak, and the Piedmont groves for
-          the walnut used in our most considered interiors. Every board is still graded by eye, and
-          every finish is still mixed and applied by hand in small batches — a constraint we&apos;ve
-          kept by choice, not necessity.
+          We believe the finest materials don&apos;t compete for attention—they quietly elevate every room they become part of.
         </p>
       </CraftGrid>
 
@@ -70,11 +68,12 @@ export default function AboutPage() {
       <CTABand
         eyebrow="Request Samples"
         title="Hold the wood in your hands."
-        body="We'll send a curated box of full-size samples — graded, oiled, and labelled — anywhere in the world, at no cost to the trade."
+        body="Complimentary full-size samples for architects, interior designers, builders, and homeowners. Experience the true color, texture, and craftsmanship of every collection before making your selection."
         actions={[
           { label: "Request a Sample", href: "/samples", solid: true },
           { label: "View Collections", href: "/collections" },
         ]}
+        backgroundImage="/image/about/sample.jpg"
       />
     </>
   );

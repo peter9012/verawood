@@ -2,10 +2,12 @@ import Image from "next/image";
 import type { PageHeroProps } from "@/types";
 import MediaPlaceholder from "@/components/ui/MediaPlaceholder";
 
-export default function PageHero({ eyebrow, title, lede, imagePlaceholder, image, imageAlt }: PageHeroProps) {
+export default function PageHero({ eyebrow, title, lede, imagePlaceholder, image, imageAlt, video }: PageHeroProps) {
   return (
     <section className="page-hero" aria-label={title}>
-      {image ? (
+      {video ? (
+        <video className="media" src={video} autoPlay muted loop playsInline />
+      ) : image ? (
         <Image
           className="media"
           src={image}

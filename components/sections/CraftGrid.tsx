@@ -6,6 +6,8 @@ interface Props {
   /** Public path to a real photo — takes priority over imagePlaceholder when set */
   image?: string;
   imageAlt?: string;
+  /** Public path to a video file — takes priority over image/imagePlaceholder when set */
+  video?: string;
   /** If true, image appears on the right */
   reversed?: boolean;
   /** Optional background override (e.g. var(--paper-deep)) */
@@ -13,14 +15,16 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function CraftGrid({ imagePlaceholder, image, imageAlt, reversed, background, children }: Props) {
+export default function CraftGrid({ imagePlaceholder, image, imageAlt, video, reversed, background, children }: Props) {
   const gridStyle = reversed
     ? { gridTemplateColumns: "0.95fr 1.05fr" }
     : undefined;
 
   const media = (
     <div className="craft__media reveal">
-      {image ? (
+      {video ? (
+        <video className="media" src={video} autoPlay muted loop playsInline />
+      ) : image ? (
         <Image className="media" src={image} alt={imageAlt ?? ""} fill sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: "cover" }} />
       ) : (
         <MediaPlaceholder caption={imagePlaceholder} />
