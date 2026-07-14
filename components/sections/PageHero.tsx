@@ -18,7 +18,7 @@ export default function PageHero({ eyebrow, title, lede, imagePlaceholder, image
           style={{ objectFit: "cover" }}
         />
       ) : (
-        <MediaPlaceholder caption={imagePlaceholder} />
+        <MediaPlaceholder caption={imagePlaceholder ?? ""} />
       )}
       <div className="page-hero__inner shell">
         <span className="eyebrow">{eyebrow}</span>

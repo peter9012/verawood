@@ -59,6 +59,7 @@ export default function Navbar() {
           aria-label={navOpen ? "Close menu" : "Open menu"}
           aria-expanded={navOpen}
           aria-controls="mobileNav"
+          tabIndex={navOpen ? -1 : undefined}
           onClick={() => setNavOpen((o) => !o)}
         >
           <span />
@@ -76,7 +77,7 @@ export default function Navbar() {
         </nav>
 
         {/* Brandmark */}
-        <Link className="brandmark" href="/" aria-label="Verawood — home">
+        <Link className="brandmark" href="/" aria-label="Verawood — home" tabIndex={navOpen ? -1 : undefined}>
           <Image
             className="brandmark__icon"
             src="/verawood-logo-white-4000.png"
@@ -111,12 +112,49 @@ export default function Navbar() {
         aria-hidden={!navOpen}
         aria-label="Mobile navigation"
       >
+        <div className="mobile-nav__bar">
+          <button
+            type="button"
+            className="mobile-nav__close"
+            aria-label="Close menu"
+            tabIndex={navOpen ? undefined : -1}
+            onClick={() => setNavOpen(false)}
+          >
+            ✕
+          </button>
+          <Link
+            className="mobile-nav__brand"
+            href="/"
+            aria-label="Verawood — home"
+            tabIndex={navOpen ? undefined : -1}
+            onClick={() => setNavOpen(false)}
+          >
+            <Image
+              className="mobile-nav__brand-icon"
+              src="/verawood-logo-white-4000.png"
+              alt=""
+              aria-hidden
+              width={40}
+              height={40}
+            />
+          </Link>
+          <Link
+            className="mobile-nav__samples"
+            href="/samples"
+            tabIndex={navOpen ? undefined : -1}
+            onClick={() => setNavOpen(false)}
+          >
+            Request Samples
+          </Link>
+        </div>
+
         <ul className="mobile-nav__list">
           {NAV_MOBILE.map(({ label, href }) => (
             <li key={href}>
               <Link
                 href={href}
                 aria-current={pathname === href ? "page" : undefined}
+                tabIndex={navOpen ? undefined : -1}
                 onClick={() => setNavOpen(false)}
               >
                 {label}
@@ -124,11 +162,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className="mobile-nav__foot">
-          <Link className="btn" href="/samples" onClick={() => setNavOpen(false)}>
-            Request Samples
-          </Link>
-        </div>
       </nav>
     </>
   );

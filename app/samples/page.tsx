@@ -22,9 +22,10 @@ export default function SamplesPage() {
     <>
       <PageHero
         eyebrow="Request Samples"
-        title="Hold the wood in your hands."
-        lede="A curated box of full-size samples — graded, oiled, and labelled — shipped anywhere in the world at no cost to the trade."
+        title="Experience the Material."
+        lede="See the true color, feel the natural texture, and compare our collections in your own space. Professionally prepared samples help architects, designers, builders, and homeowners select the perfect floor with confidence."
         imagePlaceholder="BANNER · open sample box with labelled boards on a studio table"
+        image="/image/hero/sample_hero.jpg"
       />
 
       <section className="section" aria-labelledby="samples-heading">

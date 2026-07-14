@@ -56,7 +56,7 @@ export default function ProductDetail({ product }: Props) {
       </section>
 
       {/* Natural Color Variation */}
-      <CraftGrid
+      {/* <CraftGrid
         image={product.image}
         imageAlt={`${product.name} — close detail of grain and colour variation`}
         imagePlaceholder={product.imagePlaceholder}
@@ -69,10 +69,10 @@ export default function ProductDetail({ product }: Props) {
           inherent color, texture, and grain that may not be fully represented in this sample or room
           scene. Actual color and grain pattern may vary — please consult your sales representative.
         </p>
-      </CraftGrid>
+      </CraftGrid> */}
 
       {/* Certifications */}
-      <section className="section pd-certs" aria-labelledby="pd-certs-heading">
+      {/* <section className="section pd-certs" aria-labelledby="pd-certs-heading">
         <div className="shell">
           <h2 id="pd-certs-heading" className="pd-certs__heading">
             Certifications
@@ -89,7 +89,7 @@ export default function ProductDetail({ product }: Props) {
             Full compliance details <span className="arr">→</span>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       <DocumentationList product={product} />
 

@@ -59,7 +59,7 @@ export default function CraftsmanshipPage() {
         body="We'll send a curated box of full-size samples — graded, oiled, and labelled — anywhere in the world, at no cost to the trade."
         actions={[
           { label: "Request a Sample", href: "/samples", solid: true },
-          { label: "View Collections", href: "/collections" },
+          { label: "View Collections", href: "/products" },
         ]}
       />
     </>

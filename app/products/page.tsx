@@ -24,9 +24,9 @@ export default function ProductsPage() {
     <>
       <PageHero
         eyebrow="Products"
-        title="Every board, in hand."
-        lede="Eight finishes of European White Oak, engineered for stability and brushed to raise the grain. Hover any board for full specifications."
-        imagePlaceholder="BANNER · flat-lay of eight oak finishes fanned out, studio light, no props"
+        title="Crafted for Exceptional Interiors."
+        lede="A refined palette of handcrafted finishes inspired by modern architecture. Designed to complement exceptional interiors with effortless sophistication."
+        image="/image/hero/product_hero_background.png"
       />
 
       <section className="section collections" id="products" aria-labelledby="products-heading">
@@ -37,9 +37,9 @@ export default function ProductsPage() {
             linkHref="/samples"
             linkLabel="Request a sample"
           />
-          <p className="collections__lede reveal">
-            Crafted from premium European White Oak for modern architecture.
-          </p>
+          {/* <p className="collections__lede reveal">
+            Crafted from premium White Oak for modern architecture.
+          </p> */}
           <ProductGrid products={PRODUCTS} />
         </div>
       </section>
@@ -47,11 +47,12 @@ export default function ProductsPage() {
       <CTABand
         eyebrow="Request Samples"
         title="Hold the wood in your hands."
-        body="We'll send a curated box of full-size samples — graded, oiled, and labelled — anywhere in the world, at no cost to the trade."
+        body="Complimentary full-size samples for architects, interior designers, builders, and homeowners. Experience the true color, texture, and craftsmanship of every collection before making your selection."
         actions={[
           { label: "Request a Sample", href: "/samples", solid: true },
-          { label: "View Collections", href: "/collections" },
+          { label: "View Collections", href: "/products" },
         ]}
+        backgroundImage="/image/about/sample.jpg"
       />
     </>
   );

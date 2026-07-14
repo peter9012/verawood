@@ -7,14 +7,15 @@ interface Props {
 
 export default function CTASection({ product }: Props) {
   return (
-    <CTABand
-      eyebrow="Request Samples"
-      title="Hold the wood in your hands."
-      body={`We'll send a curated, full-size sample of ${product.name} — graded, oiled, and labelled — anywhere in the world, at no cost to the trade.`}
-      actions={[
-        { label: "Request Sample", href: "/samples", solid: true },
-        { label: "Contact Us", href: "/contact" },
-      ]}
-    />
+      <CTABand
+        eyebrow="Request Samples"
+        title="Hold the wood in your hands."
+        body="Complimentary full-size samples for architects, interior designers, builders, and homeowners. Experience the true color, texture, and craftsmanship of every collection before making your selection."
+        actions={[
+          { label: "Request a Sample", href: "/samples", solid: true },
+          { label: "View Collections", href: "/products" },
+        ]}
+        backgroundImage="/image/about/sample.jpg"
+      />
   );
 }

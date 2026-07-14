@@ -71,7 +71,7 @@ export default function AboutPage() {
         body="Complimentary full-size samples for architects, interior designers, builders, and homeowners. Experience the true color, texture, and craftsmanship of every collection before making your selection."
         actions={[
           { label: "Request a Sample", href: "/samples", solid: true },
-          { label: "View Collections", href: "/collections" },
+          { label: "View Collections", href: "/products" },
         ]}
         backgroundImage="/image/about/sample.jpg"
       />

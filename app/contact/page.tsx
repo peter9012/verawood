@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import ContactForm from "@/components/sections/ContactForm";
-import MediaPlaceholder from "@/components/ui/MediaPlaceholder";
 import { SITE_URL, OG_IMAGE } from "@/lib/siteConfig";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -22,9 +22,9 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's talk about your floor."
-        lede="For trade enquiries, project consultations, or to book a showroom visit — we typically reply within one business day."
-        imagePlaceholder="BANNER · showroom interior, oak floor samples mounted on a wall, soft daylight"
+        title="Every Exceptional Home Starts Here."
+        lede="Whether you're specifying a luxury residence, designing a boutique hospitality space, or selecting flooring for your own home, our team is here to help."
+        image="/image/hero/contact_hero.png"
       />
 
       <section className="section" aria-labelledby="contact-heading">
@@ -67,7 +67,13 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="contact-map">
-                <MediaPlaceholder caption="MAP · showroom location pin, Beaune, Burgundy" />
+                  <Image
+                    src="/image/hero/showroom_hero.png"
+                    alt="VERAWOOD showroom"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 500px"
+                    style={{ objectFit: "cover" }}
+                  />           
               </div>
             </div>
           </div>

@@ -11,13 +11,9 @@ export default function Footer() {
       <div className="shell">
         <div className="footer__top">
           <div className="footer__brand">
-            <Image
-              className="footer__logo"
-              src="/verawood-horiz.png"
-              alt="Verawood"
-              width={180}
-              height={46}
-            />
+            <Link href="/" className="footer__wordmark">
+              <span>VERAWOOD</span>
+            </Link>
             <p>
               Luxury hardwood flooring for architects, interior designers, builders, and homeowners seeking exceptional craftsmanship.
             </p>

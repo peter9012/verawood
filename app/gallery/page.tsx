@@ -24,9 +24,9 @@ export default function GalleryPage() {
     <>
       <PageHero
         eyebrow="Gallery"
-        title="Where our floors come to rest."
-        lede="A working record of the rooms our boards have shipped to — selected by architects and designers across three continents."
-        imagePlaceholder="BANNER · aerial view of a serene interior, warm oak floor, diffused natural light"
+        title="Spaces That Endure."
+        lede="From private residences to boutique hospitality, explore how Verawood brings warmth, texture, and timeless craftsmanship to exceptional interiors around the world."
+        image="/image/hero/gallery_hero.png"
       />
 
       <section className="section projects" aria-labelledby="gallery-heading">
@@ -44,11 +44,12 @@ export default function GalleryPage() {
       <CTABand
         eyebrow="Request Samples"
         title="Hold the wood in your hands."
-        body="We'll send a curated box of full-size samples — graded, oiled, and labelled — anywhere in the world, at no cost to the trade."
+        body="Complimentary full-size samples for architects, interior designers, builders, and homeowners. Experience the true color, texture, and craftsmanship of every collection before making your selection."
         actions={[
           { label: "Request a Sample", href: "/samples", solid: true },
-          { label: "View Collections", href: "/collections" },
+          { label: "View Collections", href: "/products" },
         ]}
+        backgroundImage="/image/about/sample.jpg"
       />
     </>
   );

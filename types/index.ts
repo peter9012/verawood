@@ -53,14 +53,14 @@ export interface ProductGalleryImage {
 }
 
 export type ProductTone =
-  | "Natural"
-  | "Light"
-  | "Warm"
-  | "Honey"
-  | "Smoked"
-  | "Walnut"
-  | "Dark"
-  | "Blonde";
+  | "Budapest"
+  | "Oxford"
+  | "Valencia"
+  | "Lancaster"
+  | "Brussels"
+  | "Oslo"
+  | "Athens"
+  | "Bristol";
 
 // ─── Project / Gallery ───────────────────────────────────────────────────────
 
@@ -110,7 +110,8 @@ export interface PageHeroProps {
   eyebrow: string;
   title: string;
   lede?: string;
-  imagePlaceholder: string;
+  /** Required only as a fallback caption while no real photo/video exists yet */
+  imagePlaceholder?: string;
   /** Public path to a real photo — takes priority over imagePlaceholder when set */
   image?: string;
   imageAlt?: string;
