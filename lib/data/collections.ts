@@ -55,18 +55,18 @@ export const WOOD_GUIDE_STEPS: CraftStep[] = [
 export const CRAFT_STEPS: CraftStep[] = [
   {
     number: "01",
-    title: "Quarter-sawn",
-    description: "Cut for grain and dimensional calm.",
+    title: "Carefully Selected",
+    description: "Every collection begins with hardwood chosen for its natural beauty, grain consistency, and structural quality.",
   },
   {
     number: "02",
-    title: "Two-season cure",
-    description: "Air-dried before kiln, never rushed.",
+    title: "Precision Crafted",
+    description: "Advanced engineered construction provides exceptional stability and long-term durability.",
   },
   {
     number: "03",
-    title: "Hand-finished",
-    description: "Oiled by hand, board by board.",
+    title: "Refined by Hand",
+    description: "Textures and finishes are applied to highlight the authentic character of every plank.",
   },
 ];
 

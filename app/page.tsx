@@ -67,28 +67,31 @@ export default function HomePage() {
       {/* Craft */}
       <CraftGrid
         imagePlaceholder="CRAFT · hands planing a board in the atelier, sawdust in light, monochrome warmth"
+        image="/image/home/dance.png"
       >
         <span className="eyebrow reveal">The Making</span>
         <h2 className="reveal" data-delay="1">
-          A board passes through eleven hands before it reaches a floor.
+          Crafted with precision. Designed to endure.
         </h2>
         <p className="reveal" data-delay="2">
-          Logs are quarter-sawn for stability and grain, then air-dried for two seasons before kiln.
-          Each plank is graded by eye, brushed to raise its texture, and finished with natural oils
-          that let the wood breathe — never sealed beneath plastic. The result ages, rather than wears.
+          Every Verawood floor is thoughtfully crafted using premium hardwood, precision-engineered construction, and refined finishing techniques. Every detail—from species selection to surface texture—is designed to deliver lasting beauty, stability, and performance for modern living.
         </p>
         <CraftSteps steps={CRAFT_STEPS} delay={3} />
-        <LinkUnderline href="/craftsmanship" className="craft__more reveal">
+        {/* <LinkUnderline href="/craftsmanship" className="craft__more reveal">
           The full process
-        </LinkUnderline>
+        </LinkUnderline> */}
       </CraftGrid>
 
       {/* CTA */}
       <CTABand
         eyebrow="Request Samples"
         title="Hold the wood in your hands."
-        body="We'll send a curated box of full-size samples — graded, oiled, and labelled — anywhere in the world, at no cost to the trade."
-        actions={[{ label: "Request a Sample", href: "/samples", solid: true }]}
+        body="Complimentary full-size samples for architects, interior designers, builders, and homeowners. Experience the true color, texture, and craftsmanship of every collection before making your selection."
+        actions={[
+          { label: "Request a Sample", href: "/samples", solid: true },
+          { label: "View Collections", href: "/collections" },
+        ]}
+        backgroundImage="/image/about/sample.jpg"
       />
     </>
   );

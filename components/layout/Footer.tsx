@@ -59,8 +59,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <span>© {year} Verawood Atelier</span>
-          <div className="legal">
+          <span>© {year} Verawood - All rights reserved</span>          <div className="legal">
             <Link href="#">Privacy</Link>
             <Link href="#">Terms</Link>
             {/* <Link href="#">Trade Login</Link> */}
