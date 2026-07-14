@@ -4,7 +4,7 @@ export interface NavItem {
 }
 
 export const NAV_LEFT: NavItem[] = [
-  { label: "Collections", href: "/collections" },
+  { label: "Collections", href: "/products" },
   { label: "Gallery", href: "/gallery" },
 ];
 
@@ -14,7 +14,7 @@ export const NAV_RIGHT: NavItem[] = [
 ];
 
 export const NAV_MOBILE: NavItem[] = [
-  { label: "Collections", href: "/collections" },
+  { label: "Collections", href: "/products" },
   { label: "Gallery", href: "/gallery" },
   { label: "About Us", href: "/about" },
   { label: "Contact Us", href: "/contact" },
@@ -22,7 +22,7 @@ export const NAV_MOBILE: NavItem[] = [
 
 export const FOOTER_LINKS = {
   explore: [
-    { label: "Collections", href: "/collections" },
+    { label: "Collections", href: "/products" },
     // { label: "Products", href: "/products" },
     { label: "Gallery", href: "/gallery" },
     // { label: "Craftsmanship", href: "/craftsmanship" },

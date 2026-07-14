@@ -26,6 +26,8 @@ export interface Product {
   image?: string;
   /** Full gallery, in display order — first is primary. Falls back to [image] when unset. */
   images?: string[];
+  /** Standardized room/flat/grain/profile gallery for ProductGallery. Falls back to [images]/[image] when unset. */
+  gallery?: ProductGalleryImage[];
   /** One or two sentences of editorial copy for the product-detail page */
   description?: string;
   /** Downloadable spec/install/warranty PDFs — only set once real files exist in /public */
@@ -36,6 +38,18 @@ export interface ProductDocument {
   label: string;
   /** Public path to the PDF */
   href: string;
+}
+
+// ─── Product gallery ─────────────────────────────────────────────────────────
+
+export type ProductGalleryImageType = "room" | "flat" | "grain" | "profile";
+
+export interface ProductGalleryImage {
+  type: ProductGalleryImageType;
+  src: string;
+  alt: string;
+  label: string;
+  fit: "cover" | "contain";
 }
 
 export type ProductTone =

@@ -1,4 +1,5 @@
 import type { Product } from "@/types";
+import { buildProductGallery } from "@/lib/data/productGallery";
 
 export const PRODUCTS: Product[] = [
   {
@@ -7,6 +8,7 @@ export const PRODUCTS: Product[] = [
     type: "Plank",
     isNew: true,
     isFeature: true,
+    gallery: buildProductGallery("Budapest"),
     specs: {
       species: "European White Oak",
       width: '9.5" / 241 mm',
@@ -31,6 +33,7 @@ export const PRODUCTS: Product[] = [
     id: "oxford",
     name: "Oxford",
     type: "Plank",
+    gallery: buildProductGallery("Oxford"),
     specs: {
       species: "European White Oak",
       width: '7.5" / 190 mm',
@@ -54,6 +57,7 @@ export const PRODUCTS: Product[] = [
     id: "valencia",
     name: "Valencia",
     type: "Plank",
+    gallery: buildProductGallery("Valencia"),
     specs: {
       species: "European White Oak",
       width: '9.5" / 241 mm',
@@ -77,6 +81,7 @@ export const PRODUCTS: Product[] = [
     id: "lancaster",
     name: "Lancaster",
     type: "Plank",
+    gallery: buildProductGallery("Lancaster"),
     specs: {
       species: "European White Oak",
       width: '7.5" / 190 mm',
@@ -100,6 +105,7 @@ export const PRODUCTS: Product[] = [
     id: "brussels",
     name: "Brussels",
     type: "Plank",
+    gallery: buildProductGallery("Brussels"),
     specs: {
       species: "European White Oak",
       width: '9.5" / 241 mm',
@@ -123,6 +129,7 @@ export const PRODUCTS: Product[] = [
     id: "oslo",
     name: "Oslo",
     type: "Plank",
+    gallery: buildProductGallery("Oslo"),
     specs: {
       species: "European White Oak",
       width: '7.5" / 190 mm',
@@ -146,6 +153,7 @@ export const PRODUCTS: Product[] = [
     id: "athens",
     name: "Athens",
     type: "Plank",
+    gallery: buildProductGallery("Athens"),
     specs: {
       species: "European White Oak",
       width: '9.5" / 241 mm',
@@ -169,6 +177,7 @@ export const PRODUCTS: Product[] = [
     id: "bristol",
     name: "Bristol",
     type: "Plank",
+    gallery: buildProductGallery("Bristol"),
     specs: {
       species: "European White Oak",
       width: '7.5" / 190 mm',

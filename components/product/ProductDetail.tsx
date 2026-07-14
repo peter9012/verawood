@@ -4,6 +4,7 @@ import { PRODUCTS } from "@/lib/data/products";
 import CraftGrid from "@/components/sections/CraftGrid";
 import MediaPlaceholder from "@/components/ui/MediaPlaceholder";
 import ImageGallery from "./ImageGallery";
+import ProductGallery from "./ProductGallery";
 import ProductInformation from "./ProductInformation";
 import SpecificationList from "./SpecificationList";
 import DocumentationList from "./DocumentationList";
@@ -28,7 +29,9 @@ export default function ProductDetail({ product }: Props) {
           </Link>
 
           <div className="pd-hero__grid">
-            {images.length > 0 ? (
+            {product.gallery && product.gallery.length > 0 ? (
+              <ProductGallery images={product.gallery} productName={product.name} />
+            ) : images.length > 0 ? (
               <ImageGallery images={images} alt={product.name} />
             ) : (
               <div className="pd-gallery">
