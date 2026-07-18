@@ -34,9 +34,9 @@ export default function ContactPage() {
 
             <div className="contact-info reveal" data-delay="1">
               <div className="contact-info__item">
-                <h5>Showroom</h5>
+                <h5>Address</h5>
                 <p>
-                  1100 Industrial Rd #17, San Carlos, CA 94070
+                  PO Box 241, Brentwood, CA 94513
                   <br />
                   {/* Beaune, Burgundy, France{" "} */}
                   {/* <em style={{ fontStyle: "italic", color: "var(--muted)" }}>[placeholder address]</em> */}
@@ -45,27 +45,23 @@ export default function ContactPage() {
               <div className="contact-info__item">
                 <h5>Trade &amp; Sales</h5>
                 <a href="mailto:verawoodus@gmail.com">verawoodus@gmail.com</a>
-                <a href="tel:+16508888171">
+                {/* <a href="tel:+16508888171">
                   650-888-8171 {" "}
-                  {/* <em style={{ fontStyle: "italic", color: "var(--muted)" }}>[placeholder]</em> */}
                 </a>
                 <a href="tel:+14159289381">
                   415-928-9381 {" "}
-                  {/* <em style={{ fontStyle: "italic", color: "var(--muted)" }}>[placeholder]</em> */}
-                </a>
+                </a> */}
               </div>
               {/* <div className="contact-info__item">
                 <h5>Press</h5>
                 <a href="mailto:press@verawood.example">press@verawood.example</a>
               </div> */}
-              <div className="contact-info__item">
+              {/* <div className="contact-info__item">
                 <h5>Hours</h5>
                 <p>
                   M–F 8:30am – 5pm | Sat 10am – 4:30pm
-                  {/* <br />
-                  Showroom visits by appointment */}
                 </p>
-              </div>
+              </div> */}
               <div className="contact-map">
                   <Image
                     src="/image/hero/showroom_hero.png"
