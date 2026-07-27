@@ -29,11 +29,9 @@ export default function ProductCard({ product }: Props) {
           <MediaPlaceholder caption={product.imagePlaceholder} />
         )}
       </div>
-      <div className="arrival__scrim" aria-hidden="true" />
-      <div className="arrival__top">
-        {/* {product.isNew && <span className="arrival__badge">New</span>} */}
+      <div className="arrival__cap">
         <h3 className="arrival__name">{product.name}</h3>
-        {/* <span className="arrival__type">{product.type}</span> */}
+        <span className="arr" aria-hidden="true">→</span>
       </div>
       {/* <div className="arrival__foot">
         <div className="arrival__spec">

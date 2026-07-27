@@ -30,8 +30,8 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* New Arrivals */}
-      <section className="section collections" id="collections" aria-labelledby="arrivals-heading">
+      {/* New  */}
+      <section className="section collections" id="collections" aria-labelledby="-heading">
         <div className="shell">
           <SectionHeader
             eyebrow="Hot Selling Products"

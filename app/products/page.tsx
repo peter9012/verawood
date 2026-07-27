@@ -33,7 +33,7 @@ export default function ProductsPage() {
         <div className="shell">
           <SectionHeader
             eyebrow="The Range"
-            title="Eight finishes, one standard."
+            title="Ten finishes, one standard."
             linkHref="/samples"
             linkLabel="Request a sample"
           />
