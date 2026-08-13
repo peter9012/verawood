@@ -63,6 +63,8 @@ export type ProductTone =
   | "Bristol"
   | "Milan"
   | "Windsor"
+  | "Bellmont"
+  | "Catalonia"
   ;
 
 // ─── Project / Gallery ───────────────────────────────────────────────────────
