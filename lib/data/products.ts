@@ -1,5 +1,6 @@
 import type { Product } from "@/types";
 import { buildProductGallery } from "@/lib/data/productGallery";
+import { INSTALLATION_GUIDE } from "@/lib/data/documents";
 
 export const PRODUCTS: Product[] = [
   {
@@ -28,6 +29,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Budapest.jpg",
     description:
       "Crafted from White Oak, Budapest celebrates the wood in its most authentic form. Natural knots, mineral streaks, and subtle tonal variation are preserved to highlight the character of every plank. A light wire-brushed finish enhances the grain, creating a timeless surface that complements both contemporary and classic interiors.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "oxford",
@@ -52,6 +54,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Oxford.jpg",
     description:
       "Designed for interiors where light and proportion take center stage. Oxford combines soft oak tones with a subtle wire-brushed texture, offering a timeless surface that complements both modern architecture and classic craftsmanship.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "valencia",
@@ -76,6 +79,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Valencia.jpg",
     description:
       "Crafted from premium White Oak, Valencia offers a warm, sunlit palette with delicate grain and natural tonal variation. A light wire-brushed finish reveals the authentic character of the timber, creating a refined foundation that feels welcoming, timeless, and quietly luxurious.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "lancaster",
@@ -100,6 +104,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Lancaster.jpg",
     description:
       "Lancaster captures the enduring character of Oak through warm amber hues, natural knots, and distinctive grain. Finished with a light wire-brushed texture, it offers quiet sophistication and timeless appeal for thoughtfully designed interiors.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "brussels",
@@ -124,6 +129,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Brussels.jpg",
     description:
       "Brussels pairs sophisticated greige tones with authentic grain and subtle natural variation. A light wire-brushed finish enhances the texture of the timber, creating a floor that feels calm, refined, and timeless—equally at home in contemporary residences and classic architectural spaces.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "oslo",
@@ -148,6 +154,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Oslo.jpg",
     description:
       "Oslo features soft honey tones, authentic knots, and gentle natural variation. A light wire-brushed finish reveals the beauty of the grain, creating a floor with timeless warmth, quiet sophistication, and enduring architectural character.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "athens",
@@ -172,6 +179,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Athens.jpg",
     description:
       "Athens is distinguished by its refined taupe palette, subtle natural variation, and authentic grain. A light wire-brushed finish reveals the beauty of the timber, creating a floor that feels warm, balanced, and quietly luxurious.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "bristol",
@@ -196,6 +204,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Bristol.jpg",
     description:
       "Bristol is distinguished by its soft natural palette, delicate grain, and subtle tonal variation. A light wire-brushed finish enhances the beauty of the timber, creating a bright, refined foundation with timeless elegance.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "milan",
@@ -220,6 +229,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Milan.jpg",
     description:
       "Milan showcases warm, natural oak tones with subtle grain variation and a light wire-brushed finish, creating a floor that exudes timeless elegance and refined sophistication for a variety of interior styles.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "windsor",
@@ -244,6 +254,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Windsor.jpg",
     description:
       "Windsor showcases warm, natural oak tones with subtle grain variation and a light wire-brushed finish, creating a floor that exudes timeless elegance and refined sophistication for a variety of interior styles.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "bellmont",
@@ -268,6 +279,7 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Bellmont.jpg",
     description:
       "Bellmont showcases warm, natural oak tones with subtle grain variation and a light wire-brushed finish, creating a floor that exudes timeless elegance and refined sophistication for a variety of interior styles.",
+    documents: [INSTALLATION_GUIDE],
   },
   {
     id: "catalonia",
@@ -292,5 +304,6 @@ export const PRODUCTS: Product[] = [
     image: "/image/catalog/Catalonia.jpg",
     description:
       "Catalonia showcases warm, natural oak tones with subtle grain variation and a light wire-brushed finish, creating a floor that exudes timeless elegance and refined sophistication for a variety of interior styles.",
+    documents: [INSTALLATION_GUIDE],
   },
 ];

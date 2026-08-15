@@ -1,11 +1,13 @@
+import type { ReactNode } from "react";
 import type { Product } from "@/types";
 import Button from "@/components/ui/Button";
 
 interface Props {
   product: Product;
+  children?: ReactNode;
 }
 
-export default function ProductInformation({ product }: Props) {
+export default function ProductInformation({ product, children }: Props) {
   return (
     <div className="pd-info">
       <span className="eyebrow no-rule">Collections</span>
@@ -17,6 +19,7 @@ export default function ProductInformation({ product }: Props) {
         </Button>
         <Button href="/contact">Contact Us</Button>
       </div>
+      {children}
     </div>
   );
 }

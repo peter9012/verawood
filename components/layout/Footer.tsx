@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FOOTER_LINKS } from "@/lib/data/nav";
+import { INSTALLATION_GUIDE } from "@/lib/data/documents";
 import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
@@ -50,6 +51,16 @@ export default function Footer() {
                   <Link href={href}>{label}</Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href={INSTALLATION_GUIDE.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={INSTALLATION_GUIDE.ariaLabel}
+                >
+                  Installation Guide
+                </a>
+              </li>
             </ul>
           </div>
         </div>

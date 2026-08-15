@@ -40,18 +40,14 @@ export default function ProductDetail({ product }: Props) {
                 </div>
               </div>
             )}
-            <ProductInformation product={product} />
+            <ProductInformation product={product}>
+              <div className="pd-info__specs">
+                <span className="eyebrow no-rule pd-specs-label">Specifications</span>
+                <SpecificationList product={product} />
+                <DocumentationList product={product} />
+              </div>
+            </ProductInformation>
           </div>
-        </div>
-      </section>
-
-      {/* Specifications */}
-      <section className="section pd-specs" aria-labelledby="pd-specs-heading">
-        <div className="shell">
-          <h2 id="pd-specs-heading" className="pd-specs__heading">
-            Product Specifications
-          </h2>
-          <SpecificationList product={product} />
         </div>
       </section>
 
@@ -90,8 +86,6 @@ export default function ProductDetail({ product }: Props) {
           </Link>
         </div>
       </section> */}
-
-      <DocumentationList product={product} />
 
       <RelatedProducts products={related} />
 

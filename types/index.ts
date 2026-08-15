@@ -38,6 +38,10 @@ export interface ProductDocument {
   label: string;
   /** Public path to the PDF */
   href: string;
+  /** Short secondary line shown under the label, e.g. "Engineered Hardwood Flooring · PDF" */
+  meta?: string;
+  /** Explicit accessible label; falls back to `label` when unset */
+  ariaLabel?: string;
 }
 
 // ─── Product gallery ─────────────────────────────────────────────────────────
