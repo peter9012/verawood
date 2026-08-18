@@ -9,11 +9,11 @@ import { SITE_URL, OG_IMAGE } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Browse Verawood's full range of European White Oak boards — twelve finishes from pale Lume to smoked Fumo, engineered for stability and finished by hand.",
+    "Browse Verawood's full range of European White Oak boards — fourteen finishes from pale Lume to smoked Fumo, engineered for stability and finished by hand.",
   alternates: { canonical: `${SITE_URL}/products` },
   openGraph: {
     title: "Products — VERAWOOD Hardwood Flooring",
-    description: "Twelve European White Oak finishes, engineered for stability and finished by hand.",
+    description: "Fourteen European White Oak finishes, engineered for stability and finished by hand.",
     url: `${SITE_URL}/products`,
     images: [{ url: OG_IMAGE }],
   },
@@ -33,7 +33,7 @@ export default function ProductsPage() {
         <div className="shell">
           <SectionHeader
             eyebrow="The Range"
-            title="Twelve finishes, one standard."
+            title="Fourteen finishes, one standard."
             linkHref="/samples"
             linkLabel="Request a sample"
           />
