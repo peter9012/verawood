@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { NAV_LEFT, NAV_RIGHT, NAV_MOBILE } from "@/lib/data/nav";
+import { NAV_LINKS } from "@/lib/data/nav";
 
 export default function Navbar() {
   const [solid, setSolid] = useState(false);
@@ -52,6 +52,40 @@ export default function Navbar() {
   return (
     <>
       <header className={mastheadClass} ref={mastheadRef}>
+        {/* Brandmark */}
+        <Link className="brandmark" href="/" aria-label="Verawood — home" tabIndex={navOpen ? -1 : undefined}>
+          <Image
+            className="brandmark__badge"
+            src="/image/logo/verawood-badge-white.svg"
+            alt=""
+            aria-hidden
+            width={95}
+            height={119}
+          />
+          <Image
+            className="brandmark__wordmark"
+            src={solid ? "/image/logo/verawood-wordmark-dark.svg" : "/image/logo/verawood-wordmark-white.svg"}
+            alt=""
+            aria-hidden
+            width={199}
+            height={26}
+            priority
+          />
+        </Link>
+
+        {/* Main nav */}
+        <nav className="nav" aria-label="Primary navigation">
+          {NAV_LINKS.map(({ label, href }) => (
+            <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined}>
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        <Link className="samples" href="/samples">
+          <span>Request Samples</span>
+        </Link>
+
         {/* Hamburger */}
         <button
           className="menu-btn"
@@ -66,43 +100,6 @@ export default function Navbar() {
           <span />
           <span />
         </button>
-
-        {/* Left nav */}
-        <nav className="nav nav--left" aria-label="Primary navigation">
-          {NAV_LEFT.map(({ label, href }) => (
-            <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined}>
-              {label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Brandmark */}
-        <Link className="brandmark" href="/" aria-label="Verawood — home" tabIndex={navOpen ? -1 : undefined}>
-          <Image
-            className="brandmark__icon"
-            src="/verawood-logo-white-4000.png"
-            alt=""
-            aria-hidden
-            width={64}
-            height={64}
-            priority
-          />
-          <span className="brandmark__text">VERAWOOD</span>
-        </Link>
-
-        {/* Right nav */}
-        <nav className="nav nav--right" aria-label="Secondary navigation">
-          <span className="nav-set">
-            {NAV_RIGHT.map(({ label, href }) => (
-              <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined}>
-                {label}
-              </Link>
-            ))}
-          </span>
-          <Link className="samples" href="/samples">
-            <span>Request Samples</span>
-          </Link>
-        </nav>
       </header>
 
       {/* Mobile nav overlay */}
@@ -131,25 +128,17 @@ export default function Navbar() {
           >
             <Image
               className="mobile-nav__brand-icon"
-              src="/verawood-logo-white-4000.png"
+              src="/image/logo/verawood-badge-white.svg"
               alt=""
               aria-hidden
-              width={40}
-              height={40}
+              width={95}
+              height={119}
             />
-          </Link>
-          <Link
-            className="mobile-nav__samples"
-            href="/samples"
-            tabIndex={navOpen ? undefined : -1}
-            onClick={() => setNavOpen(false)}
-          >
-            Request Samples
           </Link>
         </div>
 
         <ul className="mobile-nav__list">
-          {NAV_MOBILE.map(({ label, href }) => (
+          {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
               <Link
                 href={href}
@@ -161,6 +150,15 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li className="mobile-nav__list--cta">
+            <Link
+              href="/samples"
+              tabIndex={navOpen ? undefined : -1}
+              onClick={() => setNavOpen(false)}
+            >
+              Request Samples
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

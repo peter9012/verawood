@@ -3,21 +3,11 @@ export interface NavItem {
   href: string;
 }
 
-export const NAV_LEFT: NavItem[] = [
+export const NAV_LINKS: NavItem[] = [
   { label: "Collections", href: "/products" },
-  { label: "Gallery", href: "/gallery" },
-];
-
-export const NAV_RIGHT: NavItem[] = [
-  { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
-];
-
-export const NAV_MOBILE: NavItem[] = [
-  { label: "Collections", href: "/products" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Projects", href: "/gallery" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const FOOTER_LINKS = {
