@@ -4,11 +4,46 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (submitting) return;
+
+    const data = new FormData(e.currentTarget);
+    const payload = {
+      name: data.get("name")?.toString().trim() ?? "",
+      email: data.get("email")?.toString().trim() ?? "",
+      phone: data.get("phone")?.toString().trim() ?? "",
+      topic: data.get("topic")?.toString().trim() ?? "",
+      message: data.get("message")?.toString().trim() ?? "",
+    };
+
+    setSubmitting(true);
+    setError(false);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <form
       className={`form reveal${sent ? " is-sent" : ""}`}
-      onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+      onSubmit={handleSubmit}
       noValidate
     >
       <div className="form__fields">
@@ -48,9 +83,16 @@ export default function ContactForm() {
           />
         </div>
         <div className="form__actions">
-          <button className="btn btn--solid" type="submit">Send Message</button>
+          <button className="btn btn--solid" type="submit" disabled={submitting}>
+            {submitting ? "Sending..." : "Send Message"}
+          </button>
           <p className="form-note">We typically reply within one business day.</p>
         </div>
+        {error && (
+          <p className="form-error" role="alert">
+            We couldn&apos;t send your message. Please try again.
+          </p>
+        )}
       </div>
       <div className="form__success" tabIndex={-1}>
         <h3 className="display">Message sent.</h3>

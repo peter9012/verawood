@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/lib/data/nav";
 
 export default function Navbar() {
-  const [solid, setSolid] = useState(false);
+  const [solid, setSolid] = useState(true);
   const [navOpen, setNavOpen] = useState(false);
   const pathname = usePathname();
   const mastheadRef = useRef<HTMLElement>(null);
@@ -15,7 +15,7 @@ export default function Navbar() {
   // Become solid when the hero/page-hero scrolls out of view
   useEffect(() => {
     const hero = document.querySelector<HTMLElement>(".hero, .page-hero");
-    if (!hero) { setSolid(true); return; }
+    if (!hero) return;
 
     const io = new IntersectionObserver(
       ([entry]) => setSolid(!entry.isIntersecting),
@@ -24,9 +24,6 @@ export default function Navbar() {
     io.observe(hero);
     return () => io.disconnect();
   }, [pathname]);
-
-  // Close nav when route changes
-  useEffect(() => { setNavOpen(false); }, [pathname]);
 
   // Lock body scroll while nav is open
   useEffect(() => {

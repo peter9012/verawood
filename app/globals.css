@@ -147,6 +147,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .btn:hover { background: var(--ink); color: var(--paper); }
 .btn--solid { background: var(--ink); color: var(--paper); }
 .btn--solid:hover { background: transparent; color: var(--ink); }
+.btn:disabled, .btn:disabled:hover { opacity: 0.6; cursor: not-allowed; background: var(--ink); color: var(--paper); }
 
 .link-underline {
   font-family: var(--font-eyebrow);
@@ -854,6 +855,7 @@ body.lightbox-open { overflow: hidden; }
 .form__actions { margin-top: clamp(8px, 2vw, 16px); display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .form__actions .btn { cursor: pointer; }
 .form-note { font-family: var(--font-cap); font-size: 13.5px; color: var(--muted); margin: 0; }
+.form-error { font-family: var(--font-cap); font-size: 13.5px; color: var(--accent); margin: 14px 0 0; }
 .form__success { display: none; padding: clamp(28px, 4vw, 44px); border: 1px solid var(--line); background: var(--paper-deep); }
 .form__success h3 { font-family: var(--font-display); font-size: clamp(22px, 2.4vw, 30px); font-weight: var(--disp-weight); }
 .form__success p { color: var(--ink-soft); margin-top: 12px; }
