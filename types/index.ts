@@ -72,6 +72,7 @@ export type ProductTone =
   | "Prague"
   | "Yorkshire"
   | "Montclair"
+  | "Cortona"
   ;
 
 // ─── Project / Gallery ───────────────────────────────────────────────────────
