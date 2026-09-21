@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const description =
     product.description ??
-    `${product.name} — ${product.specs.tone.toLowerCase()}-tone European White Oak, ${product.specs.width} wide, engineered and finished by hand.`;
+    `${product.name} — ${product.specs.tone.toLowerCase()}-tone White Oak, ${product.specs.width} wide, engineered and finished by hand.`;
 
   return {
     title: product.name,

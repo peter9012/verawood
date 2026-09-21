@@ -12,11 +12,11 @@ import { SITE_URL, OG_IMAGE } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Since 1974, Verawood has sourced and finished European hardwood flooring from Piedmont and Burgundy — family-run, architect-trusted, built to age rather than wear.",
+    "Since 1974, Verawood has sourced and finished white oak hardwood flooring from Piedmont and Burgundy — family-run, architect-trusted, built to age rather than wear.",
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: "About — VERAWOOD Hardwood Flooring",
-    description: "Family-run since 1974, Verawood sources and finishes European hardwood flooring from Piedmont and Burgundy.",
+    description: "Family-run since 1974, Verawood sources and finishes white oak hardwood flooring from Piedmont and Burgundy.",
     url: `${SITE_URL}/about`,
     images: [{ url: OG_IMAGE }],
   },

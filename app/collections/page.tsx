@@ -12,11 +12,11 @@ import { SITE_URL, OG_IMAGE } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Collections",
   description:
-    "Explore Verawood's hardwood collections — European White Oak, French Walnut, and Smoked Ash — quarter-sawn, air-dried, and hand-finished for architectural interiors.",
+    "Explore Verawood's hardwood collections — White Oak, French Walnut, and Smoked Ash — quarter-sawn, air-dried, and hand-finished for architectural interiors.",
   alternates: { canonical: `${SITE_URL}/collections` },
   openGraph: {
     title: "Collections — VERAWOOD Hardwood Flooring",
-    description: "Three timbers, one philosophy. Explore Verawood's European White Oak, French Walnut, and Smoked Ash collections.",
+    description: "Three timbers, one philosophy. Explore Verawood's White Oak, French Walnut, and Smoked Ash collections.",
     url: `${SITE_URL}/collections`,
     images: [{ url: OG_IMAGE }],
   },

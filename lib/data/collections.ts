@@ -2,11 +2,11 @@ import type { Collection, CraftStep } from "@/types";
 
 export const COLLECTIONS: Collection[] = [
   {
-    id: "european-white-oak",
-    title: "European White Oak",
+    id: "white-oak",
+    title: "White Oak",
     description:
       "Our founding material, quarter-sawn from Burgundy forests since 1974. Pale, warm, and endlessly architectural.",
-    imagePlaceholder: "COLLECTION · European White Oak — pale, sunlit room, wide board detail",
+    imagePlaceholder: "COLLECTION · White Oak — pale, sunlit room, wide board detail",
     href: "/products",
     linkLabel: "View oak boards",
   },

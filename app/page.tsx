@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
   openGraph: {
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
-    description: "Premium European hardwood flooring for architects, designers, and discerning homes, since 1974.",
+    description: "Premium white oak hardwood flooring for architects, designers, and discerning homes, since 1974.",
     url: SITE_URL,
     images: [{ url: OG_IMAGE }],
   },

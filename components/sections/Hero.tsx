@@ -37,7 +37,7 @@ export default function Hero() {
             key={src}
             className={`media hero__slide${i === active ? " is-active" : ""}`}
             src={src}
-            alt={i === 0 ? "Cinematic living room with European oak floor and full-height glazing" : ""}
+            alt={i === 0 ? "Cinematic living room with white oak floor and full-height glazing" : ""}
             fill
             priority={i === 0}
             sizes="100vw"

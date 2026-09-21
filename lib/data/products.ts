@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
       wear: "4mm",
     },
     imagePlaceholder:
-      "FLOOR · natural European white oak, wire-brushed grain, authentic knots, matte finish, raking daylight",
+      "FLOOR · natural white oak, wire-brushed grain, authentic knots, matte finish, raking daylight",
     image: "/image/catalog/Budapest.jpg",
     description:
       "Crafted from White Oak, Budapest celebrates the wood in its most authentic form. Natural knots, mineral streaks, and subtle tonal variation are preserved to highlight the character of every plank. A light wire-brushed finish enhances the grain, creating a timeless surface that complements both contemporary and classic interiors.",

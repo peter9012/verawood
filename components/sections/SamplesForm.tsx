@@ -73,7 +73,7 @@ export default function SamplesForm() {
             <label htmlFor="s-species">Species of Interest</label>
             <select id="s-species" name="species">
               <option value="">Not sure yet</option>
-              <option>European White Oak</option>
+              <option>White Oak</option>
               <option>French Walnut</option>
               <option>Smoked Ash</option>
               <option>All three</option>
