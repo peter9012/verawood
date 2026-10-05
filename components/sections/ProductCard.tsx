@@ -35,7 +35,7 @@ export default function ProductCard({ product }: Props) {
       </div>
       {/* <div className="arrival__foot">
         <div className="arrival__spec">
-          <span>European White Oak</span>
+          <span>White Oak</span>
           <span>
             {product.specs.finish.includes("Wire") || product.specs.tone === "Natural" || product.specs.tone === "Warm" || product.specs.tone === "Smoked" || product.specs.tone === "Dark"
               ? "Wire Brushed"

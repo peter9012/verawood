@@ -73,6 +73,9 @@ export type ProductTone =
   | "Yorkshire"
   | "Montclair"
   | "Cortona"
+  | "Edinburgh"
+  | "Kensington"
+  | "Florence 7.5"
   ;
 
 // ─── Project / Gallery ───────────────────────────────────────────────────────
