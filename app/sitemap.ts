@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/craftsmanship",priority: 0.7 },
     { path: "/about",        priority: 0.6 },
     { path: "/sustainability",priority: 0.6 },
-    { path: "/contact",      priority: 0.6 },
+    { path: "/care",         priority: 0.6 },    { path: "/contact",      priority: 0.6 },
   ];
 
   return routes.map(({ path, priority }) => ({

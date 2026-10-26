@@ -22,5 +22,7 @@ export const FOOTER_LINKS = {
     // { label: "Sustainability", href: "/sustainability" },
     { label: "Contact", href: "/contact" },
   ],
-  trade: [{ label: "Request Samples", href: "/samples" }],
+  trade: [
+    { label: "Request Samples", href: "/samples" },
+    { label: "Floor Care", href: "/care" },  ],
 };

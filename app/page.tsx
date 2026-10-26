@@ -7,8 +7,10 @@ import ProjectTile from "@/components/sections/ProjectTile";
 import CraftGrid from "@/components/sections/CraftGrid";
 import CraftSteps from "@/components/sections/CraftSteps";
 import CTABand from "@/components/sections/CTABand";
+import ResourceCards from "@/components/sections/ResourceCards";
 import LinkUnderline from "@/components/ui/LinkUnderline";
 import { PRODUCTS } from "@/lib/data/products";
+import { RESOURCES } from "@/lib/data/resources";
 import { FEATURE_PROJECT, HOME_PROJECTS } from "@/lib/data/projects";
 import { CRAFT_STEPS } from "@/lib/data/collections";
 import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SITE_URL, OG_IMAGE } from "@/lib/siteConfig";
@@ -81,6 +83,14 @@ export default function HomePage() {
           The full process
         </LinkUnderline> */}
       </CraftGrid>
+
+      {/* Resources */}
+      <ResourceCards
+        eyebrow="Resources"
+        title="Installation, Care & Warranty"
+        lede="Everything you need to install, maintain, and protect your Verawood flooring."
+        resources={RESOURCES}
+      />
 
       {/* CTA */}
       <CTABand

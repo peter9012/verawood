@@ -5,12 +5,14 @@ interface Props {
   title: string;
   linkHref?: string;
   linkLabel?: string;
+  /** id for the heading, so the section can reference it via aria-labelledby */
+  id?: string;
 }
 
-export default function SectionHeader({ eyebrow, title, linkHref, linkLabel }: Props) {
+export default function SectionHeader({ eyebrow, title, linkHref, linkLabel, id }: Props) {
   return (
     <div className="sec-head reveal">
-      <h2 className="sec-head__title">
+      <h2 className="sec-head__title" id={id}>
         <span className="eyebrow">{eyebrow}</span>
         {title}
       </h2>

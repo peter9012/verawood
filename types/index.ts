@@ -112,6 +112,27 @@ export interface CraftStep {
   description: string;
 }
 
+// ─── Resource ────────────────────────────────────────────────────────────────
+
+/** What a resource card's call to action does. */
+export type ResourceAction =
+  /** Internal page link */
+  | { type: "link"; label: string; href: string }
+  /** PDF that opens directly in a new tab */
+  | { type: "pdf"; label: string; href: string; ariaLabel?: string }
+  /** PDF shown in an on-page preview modal, with download and new-tab controls */
+  | { type: "pdf-preview"; label: string; href: string; previewTitle: string; downloadName: string };
+
+export interface Resource {
+  id: string;
+  title: string;
+  description: string;
+  /** Public path to the card photo */
+  image: string;
+  imageAlt: string;
+  action: ResourceAction;
+}
+
 // ─── CTA Band ────────────────────────────────────────────────────────────────
 
 export interface CTAAction {

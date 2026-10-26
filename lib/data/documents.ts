@@ -6,3 +6,9 @@ export const INSTALLATION_GUIDE: ProductDocument = {
   meta: "Engineered Hardwood Flooring · PDF",
   ariaLabel: "Engineered Hardwood Installation Guide PDF (opens in a new tab)",
 };
+
+export const WARRANTY_DOCUMENT: ProductDocument = {
+  label: "Verawood Warranty",
+  href: "/assets/verawood-warranty.pdf",
+  meta: "Engineered Hardwood Flooring · PDF",
+};
